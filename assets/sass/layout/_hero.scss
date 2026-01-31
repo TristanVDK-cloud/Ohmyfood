@@ -1,0 +1,23 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.hero {
+    background-color: $color-grey;
+    text-align: center;
+    padding: 30px 20px;
+
+    h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        padding: 0 30px;
+    }
+
+    &__btn {
+        margin: 20px 0 30px 0;
+        @include btn-primary;
+    }
+
+    &__text {
+        color: $color-grey-menu;
+    }
+}

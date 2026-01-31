@@ -1,0 +1,41 @@
+@use "../utils/variables" as *;
+
+.footer {
+    background-color: $color-grey-menu;
+    color: $color-white;
+    padding: 0 0 20px 0;
+
+    &__logo {
+        font-family: $font-secondary;
+        padding: 20px;
+        font-weight: 400;
+    }
+
+    &__link &__content {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        font-weight: 500;
+    }
+
+    &__links {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__content {
+        color: $color-white;
+        display: flex;
+        margin: 0 0 15px 20px;
+        text-align: center;
+
+        & i {
+            width: 20px;
+            margin-right: 10px;
+        }
+    }
+
+    &-text {
+        font-weight: 400;
+    }
+}
