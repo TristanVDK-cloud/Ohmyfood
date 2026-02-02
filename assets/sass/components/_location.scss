@@ -16,4 +16,8 @@
         color: $color-grey-menu;
         font-weight: bold;
     }
+
+    @media screen and (min-width: 1024px) {
+        box-shadow: none;
+    }
 }

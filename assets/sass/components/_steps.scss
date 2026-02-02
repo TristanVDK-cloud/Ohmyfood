@@ -1,34 +1,41 @@
 @use "../utils/variables" as *;
-
-.steps h2 {
-    margin-top: 50px;
-}
-
-.steps ul {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 20px 0;
-}
+@use "../utils/mixins" as *;
 
 .steps {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
+    padding: 50px 0;
+
+    &__container {
+        @include section-container;
+    }
+
+    h2 {
+        margin-bottom: 25px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 0;
+        list-style: none;
+
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
 
     &__cards {
         background-color: $color-grey;
-        width: 100%;
-        max-width: 322px;
+        flex: 1;
         position: relative;
         display: flex;
-        flex-direction: row;
         align-items: center;
-        gap: 20px;
-        padding: 25px 30px;
-        margin-left: 20px;
+        padding: 25px;
         border-radius: 20px;
         box-shadow: 0px 4px 15px 0px #00000026;
+        margin-left: 12px;
+        gap: 15px;
     }
 
     &__number {

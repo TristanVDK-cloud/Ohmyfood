@@ -41,6 +41,11 @@ p {
   padding: 15px 0 15px 0;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
+@media screen and (min-width: 1024px) {
+  .header {
+    box-shadow: none;
+  }
+}
 
 .hero {
   background-color: #F6F6F6;
@@ -69,6 +74,11 @@ p {
 }
 .hero__text {
   color: #353535;
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    padding-bottom: 0;
+  }
 }
 
 .footer {
@@ -104,6 +114,17 @@ p {
 .footer-text {
   font-weight: 400;
 }
+@media screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+    padding: 10px 0;
+  }
+  .footer__links {
+    display: flex;
+  }
+}
 
 .location {
   background-color: #EAEAEA;
@@ -122,36 +143,47 @@ p {
   color: #353535;
   font-weight: bold;
 }
-
-.steps h2 {
-  margin-top: 50px;
-}
-
-.steps ul {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 20px 0;
+@media screen and (min-width: 1024px) {
+  .location {
+    box-shadow: none;
+  }
 }
 
 .steps {
+  padding: 50px 0;
+}
+.steps__container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.steps h2 {
+  margin-bottom: 25px;
+}
+.steps ul {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+  gap: 25px;
+  padding: 0;
+  list-style: none;
+}
+@media screen and (min-width: 1024px) {
+  .steps ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .steps__cards {
   background-color: #F6F6F6;
-  width: 100%;
-  max-width: 322px;
+  flex: 1;
   position: relative;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 20px;
-  padding: 25px 30px;
-  margin-left: 20px;
+  padding: 25px;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  margin-left: 12px;
+  gap: 15px;
 }
 .steps__number {
   position: absolute;
@@ -175,24 +207,51 @@ p {
 
 .restaurants {
   background-color: #F6F6F6;
-  padding: 20px;
+  padding: 50px 0;
 }
-
+.restaurants__container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 .restaurants h2 {
-  margin: 30px 0 20px 0;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
 }
 
 .restaurants-cards {
   background-color: #FFFFFF;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   margin-bottom: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   overflow: hidden;
 }
+.restaurants-cards a {
+  display: block;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants-cards {
+    width: 45%;
+  }
+}
 .restaurants-cards__image-container {
-  display: flex;
+  width: 100%;
   position: relative;
   height: 175px;
 }
@@ -213,7 +272,7 @@ p {
   padding: 5px 12px;
   border-radius: 2px;
 }
-.restaurants-cards__footer {
+.restaurants-cards__info {
   display: flex;
   justify-content: space-between;
   align-items: center;

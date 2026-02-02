@@ -3,23 +3,50 @@
 
 .restaurants {
     background-color: $color-grey;
-    padding: 20px;
-}
+    padding: 50px 0;
 
-.restaurants h2 {
-    margin: 30px 0 20px 0;
+    &__container {
+        @include section-container;
+    }
+
+    h2 {
+        margin-bottom: 25px;
+    }
+
+    &__grid {
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+    }
 }
 
 .restaurants-cards {
     background-color: $color-white;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
     margin-bottom: 20px;
     @include shadow-cards;
     overflow: hidden;
 
+    a {
+        display: block;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 45%;
+    }
+
     &__image-container {
-        display: flex;
+        width: 100%;
         position: relative;
         height: 175px;
     }
@@ -42,7 +69,7 @@
         border-radius: 2px;
     }
 
-    &__footer {
+    &__info {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -75,6 +102,7 @@
             opacity: 1;
         }
     }
+
     &__content {
         color: $color-black;
     }

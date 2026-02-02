@@ -20,4 +20,8 @@
     &__text {
         color: $color-grey-menu;
     }
+
+    @media screen and (min-width: 1024px) {
+        padding-bottom: 0;
+    }
 }
