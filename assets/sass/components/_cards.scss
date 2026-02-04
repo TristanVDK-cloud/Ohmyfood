@@ -33,7 +33,7 @@
     background-color: $color-white;
     width: 100%;
     margin-bottom: 20px;
-    @include shadow-cards;
+    @include shadow-radius(15px, 0);
     overflow: hidden;
 
     a {

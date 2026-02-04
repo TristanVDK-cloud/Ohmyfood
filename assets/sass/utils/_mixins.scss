@@ -1,33 +1,13 @@
 @use "../utils/variables" as *;
 
-@mixin btn-primary {
-    font-weight: 500;
-    padding: 15px;
-    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
-    color: white;
-    cursor: pointer;
-    transition: all 300ms ease;
-
-    &:hover {
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-        opacity: 0.85;
-    }
+@mixin shadow-radius($radius: 15px, $padding: 15px) {
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2);
+    border-radius: $radius;
+    padding: $padding;
 }
 
-
-@mixin shadow-cards {
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-}
-
-@mixin shadow-btn {
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-}
-
-@mixin section-container {
+@mixin section-container($margin: 0 auto, $padding: 0 20px) {
     max-width: 1080px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: $margin;
+    padding: $padding;
 }
