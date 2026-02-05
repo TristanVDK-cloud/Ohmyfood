@@ -6,8 +6,8 @@
     padding: $padding;
 }
 
-@mixin section-container($margin: 0 auto, $padding: 0 20px) {
-    max-width: 1080px;
+@mixin section-container($max-width: 1080px, $margin: 0 auto, $padding: 0 20px) {
+    max-width: $max-width;
     margin: $margin;
     padding: $padding;
 }
